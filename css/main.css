@@ -1,0 +1,193 @@
+body {
+  font-family: Helvetica, sans-serif;
+  min-width: 980px;
+}
+
+/* nav */ 
+
+header {
+  /* make this relative so #signin is abs positioned to this */  
+  position: relative;
+}
+
+nav {
+  height: 30px;
+  background-color: #333;
+}
+
+nav li {
+  padding: 0 0 0 16px;
+
+  font-size: 13px;
+  line-height: 30px;
+  font-weight: bold;
+
+  display: inline-block;
+}
+
+nav a {
+  color: #BBB;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.expandable:after {
+  position: relative;
+  left: 5px;
+  top: -2px;
+
+  font-family: FontAwesome;
+  content: "\f0d7"; /* down caret */
+  color: #BBB;
+  font-size: 8px;
+}
+
+.expandable:hover:after {
+  color: white;
+}
+
+#signin {
+  position: absolute;
+  right: 20px;
+  top: 50px;
+
+  padding: 7px 16px;
+  border-radius: 3px;
+
+  background-color: #E04343;
+  border: 1px solid #E04343; /* give it same color as backgroud gets rid of weird jank when hover border is shown */
+  color: white;
+
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#signin:hover {
+  border: 1px solid #AA3939;
+  background: #e04343;
+  background: -moz-linear-gradient(top, #e04343 0%, #c23838 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, #e04343), color-stop(100%, #c23838));
+  background: -webkit-linear-gradient(top, #e04343 0%, #c23838 100%);
+  background: -o-linear-gradient(top, #e04343 0%, #c23838 100%);
+  background: -ms-linear-gradient(top, #e04343 0%, #c23838 100%);
+  background: linear-gradient(to bottom, #e04343 0%, #c23838 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e04343', endColorstr='#c23838', GradientType=0 );
+}
+
+/* main logo, input, buttons */ 
+
+#main {
+  position: relative;
+  margin: 0 0 60px 0;
+}
+
+#search {  
+  margin: 160px auto 0 auto;
+  width:600px;
+  height:200px;
+  text-align: center;
+}
+
+#search-term {
+  width: 550px;
+  height: 25px;
+
+  margin: 25px auto 15px auto;
+  border: 1px solid #CCC;
+
+  text-indent: 5px;
+}
+
+#search-term:after {
+  font-family: FontAwesome;
+  content: "\f000";
+}
+
+#search-term:hover {
+  border: 1px solid #AAA;
+}
+
+#search-term:focus {
+  border: 1px solid #0E9CFA;
+  outline: none;
+  box-shadow: inset 0px 1px 3px rgba(0,0,0,0.15);
+}
+
+#search img {
+  width: 275px;
+}
+
+.btn {
+  padding: 7px 12px;
+  border-radius: 2px;
+  border: 1px solid #CCC;
+  background-color: #EEE;
+
+  color: #111;
+  font-weight: bold;
+}
+
+.btn:hover {
+  border: 1px solid #AAA; 
+  box-shadow: 0px 1px 1px rgba(0,0,0,0.15);
+}
+
+
+/* footer stuff */
+
+footer {
+  border-top: 1px solid #EEE;
+  height: 30px;
+  width: 100%;
+}
+
+footer ul {
+  text-align: right;
+}
+
+footer li {
+  padding: 0 16px 0 0;
+
+  font-size: 13px;
+  line-height: 30px;
+
+  display: inline-block; 
+}
+
+footer a {
+  color: #666;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* sticky footer 
+   http://css-tricks.com/snippets/css/sticky-footer/?codekitCB=400997552.142737 */ 
+
+html, body {
+  height: 100%;
+}
+
+#page-wrap {
+  min-height: 100%;
+  margin-bottom: -31px; 
+  /* using 30 would show v scrollbar all the time, so changed to 31 */
+}
+
+#page-wrap:after {
+  content: "";
+  display: block;
+}
+
+#page-wrap:after {
+  height: 30px; 
+}
+ 
+
+
